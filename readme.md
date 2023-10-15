@@ -56,13 +56,10 @@ AES cannot be broken by brute force even with super computers within a reasonabl
 Breaking a 56-bit DES (Data Encryption Standard) key using a classical computer with 16 GB of RAM and 6 processor cores is feasible and can be done relatively quickly.
 The time it takes to break a DES key using a brute-force attack on a classical computer depends on various factors:
 
-Key Space Size: DES has a key space of 2^56 possible keys since it uses 56-bit keys.
-
-Processing Speed: The speed at which your computer can test different keys per second.
-
-Parallelism: The extent to which the task can be parallelized using multiple processor cores.
-
-Algorithm Efficiency: How efficiently the key testing algorithm is implemented.
+*Key Space Size*: DES has a key space of 2^56 possible keys since it uses 56-bit keys. \
+*Processing Speed*: The speed at which your computer can test different keys per second. \
+*Parallelism*: The extent to which the task can be parallelized using multiple processor cores. \
+*Algorithm Efficiency*: How efficiently the key testing algorithm is implemented.
 
 Without knowing the exact processing speed of your computer, it's challenging to provide an exact time frame. However, as a rough estimate, 
 let's assume your computer can test 1 million keys per second per core (this depends on the specific software and hardware optimizations). 
@@ -85,3 +82,22 @@ Seconds in an hour: 3600 \
 Seconds in a year: 31536000 \
 12009599006.321 seconds = (2^56) / (6,000,000 keys/second) \
 Total amount of years to crack = 38051750 years
+
+# Ciphey notes
+Another test done on the capstone was to see if the Ciphey python library could be used to identify encryption messages and keys.
+
+https://github.com/Ciphey/Ciphey \
+https://github.com/Ciphey/Ciphey/wiki
+
+The following commands can be used to run ciphey on docker.
+
+run docker image:
+``` bash
+sudo docker run -it --rm remnux/ciphey
+```
+
+
+run ciphey decrypt:
+``` bash
+sudo docker run -it --rm remnux/ciphey "68ed3aeb7175dcc290007b9d2347a4fd0b6463b7a0ea1e7b91b47d8e4c822fff"
+```

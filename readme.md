@@ -53,7 +53,7 @@ AES cannot be broken by brute force even with super computers within a reasonabl
 
 ## Cracking DES with  16 GB RAM and  6 core processes
 
-Breaking a 56-bit DES (Data Encryption Standard) key using a classical computer with 16 GB of RAM and 6 processor cores is feasible and can be done relatively quickly.
+Breaking a 56-bit DES (Data Encryption Standard) key using a classical computer with 16 GB of RAM and 6 processor cores is not feasible.
 The time it takes to break a DES key using a brute-force attack on a classical computer depends on various factors:
 
 *Key Space Size*: DES has a key space of 2^56 possible keys since it uses 56-bit keys. \

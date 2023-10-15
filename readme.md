@@ -99,5 +99,10 @@ sudo docker run -it --rm remnux/ciphey
 
 run ciphey decrypt:
 ``` bash
+sudo docker run -it --rm remnux/ciphey "<encrypted-message>"
+```
+
+example
+``` bash
 sudo docker run -it --rm remnux/ciphey "68ed3aeb7175dcc290007b9d2347a4fd0b6463b7a0ea1e7b91b47d8e4c822fff"
 ```
